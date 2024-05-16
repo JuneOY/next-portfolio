@@ -1,0 +1,39 @@
+{
+	"nav": {
+		"hello": "首页",
+		"about-me": "关于我",
+		"projects": "项目",
+		"blog": "博客",
+		"contact-me": "联系我"
+	},
+	"hero": {
+		"head": "大家好，我是",
+		"myName": "欧阳彭波",
+		"role": "前端开发人员",
+		"info-action": "完成游戏继续",
+		"info-github": "你也可以在我的Github页面上看到它"
+	},
+	"game": {
+		"keyboard": "使用键盘",
+		"arrows-play": "控制箭头",
+		"food-left": "剩下的"
+	},
+	"footer": {
+		"find-me": "找到我"
+	},
+	"about-me": {
+		"professional-info": "专业常识",
+		"experience": "经历",
+		"hard-skills": "硬性技能",
+		"soft-skills": "软件技能",
+		"contacts": "联系方式",
+		"personal-info": "个人信息",
+		"bio": "个人简历",
+		"interests": "爱好",
+		"education": "教育经历",
+		"hobbies-info": "兴趣爱好",
+		"sports": "体育运动",
+		"favorite-games": "最喜欢的游戏",
+		"code-show": "代码片段展示"
+	}
+}
