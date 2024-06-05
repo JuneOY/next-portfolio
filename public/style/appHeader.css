@@ -1,0 +1,42 @@
+#nav-link {
+    border-right: 1px solid #1e2d3d;
+    @apply text-menu-text font-fira_retina px-6 h-full flex items-center;
+}
+
+#nav-link-contact {
+    border-left: 1px solid #1e2d3d;
+    cursor: pointer;
+    @apply text-menu-text font-fira_retina px-6 h-full flex items-center;
+}
+
+#nav-link:hover,
+#nav-link-contact:hover {
+    background-color: #1e2d3d74;
+    color: white;
+}
+
+#nav-logo {
+    border-right: 1px solid #1e2d3d;
+    @apply text-menu-text font-fira_retina px-6 h-full flex items-center;
+}
+
+#nav-logo:hover {
+    background-color: #1e2d3d74;
+    color: white;
+}
+
+#navbar .active {
+    border-bottom: 2px solid #fea55f;
+    color: white;
+}
+
+#nav-logo.router-link-active {
+    border-right: 1px solid #1e2d3d;
+    border-bottom: none;
+    @apply text-menu-text;
+}
+
+#navbar>nav {
+    height: 45px;
+    font-size: 13px;
+}

@@ -1,0 +1,26 @@
+.tag {
+    color: #c98bdf;
+}
+
+.tag-name {
+    color: #5565e8;
+}
+
+.arrow {
+    color: #f8f8f8;
+}
+
+.code-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.line-numbers {
+    text-align: right;
+}
+
+.text-container {
+    width: 100%;
+    padding-left: 0px;
+    word-wrap: break-word;
+}

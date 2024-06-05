@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "hello": "hello",
+    "about-me": "about-me",
+    "projects": "projects",
+    "blog": "blog",
+    "contact-me": "contact-me"
+  },
+  "hero": {
+    "head": "Hi all, I am",
+    "myName": "PB ouYang",
+    "role": "Front-end developer",
+    "info-action": "complete the game to continue",
+    "info-github": "you can also see it on my Github page"
+  },
+  "game": {
+    "keyboard": "use your keyboard",
+    "arrows-play": "arrows to play",
+    "food-left": "food left"
+  },
+  "footer": {
+    "find-me": "find me in"
+  },
+  "about-me": {
+    "professional-info": "professional-info",
+    "experience": "experience",
+    "hard-skills": "hard-skills",
+    "soft-skills": "soft-skills",
+    "contacts": "contacts",
+    "personal-info": "personal-info",
+    "bio": "bio",
+    "interests": "interests",
+    "education": "education",
+    "hobbies-info": "hobbies-info",
+    "sports": "sports",
+    "favorite-games": "favorite-games",
+    "code-show": "code-show"
+  }
+}

@@ -9,16 +9,19 @@ h2 {
   font-size: 15px;
 }
 
-html {
-  @apply bg-dark-background;
+html,
+body {
+  height: -webkit-fill-available;
+  height: -moz-available;
   height: stretch;
+  width: -webkit-fill-available;
+  width: -moz-available;
   width: stretch;
-  margin: 30px;
 }
 
-body {
-  height: stretch;
-  width: stretch;
+html {
+  @apply bg-dark-background;
+  margin: 30px;
 }
 
 main.page {
@@ -30,10 +33,11 @@ main.page {
   overflow: hidden;
 }
 
-#__nuxt {
+#__next {
   @apply bg-blue-background flex flex-col justify-between;
   border-radius: 7px;
   border: 1px solid #1E2D3D;
+
   height: 100%;
   width: 100%;
 }
@@ -81,11 +85,12 @@ main.page {
     width: stretch;
   }
 
-  #__nuxt {
+  #__next {
     @apply bg-blue-background flex flex-col;
     justify-content: space-between;
     height: auto;
     min-height: stretch;
+    min-height: -webkit-fill-available;
     /* This allows the page view for mobile to be full height when the content is less than the screen height. */
     width: 100%;
     width: auto;

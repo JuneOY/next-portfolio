@@ -1,18 +1,27 @@
-import { readFileSync } from "fs";
-import path from "path";
+"use client";
+
+import { useEffect, useState } from "react";
 import "../public/style/page.css";
+import { SnakeGame } from "./components";
 
-async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "public/json", "developer.json");
-  const jsonData = readFileSync(filePath, "utf8");
-  const config = JSON.parse(jsonData);
+export default function Home() {
+  useEffect(() => {
+    if (window.innerWidth <= 1024) setMobile(true);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
-  return config;
-}
+  const [isMobile, setMobile] = useState(false);
 
-export default async function Home() {
-  const config = await getStaticProps();
-
+  function handleResize() {
+    if (window.innerWidth <= 1024) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  }
   return (
     <main id="hello">
       {/* gradients  */}
@@ -22,35 +31,38 @@ export default async function Home() {
       <section className="hero">
         <div className="head">
           <span> Hi all, I am </span>
-          <h1>{config.name}</h1>
+          <h1>PB ouYang</h1>
           <span className="diple flex">
             {">"}&nbsp;
-            <h2 className="line-1 anim-typewriter max-w-fit">{config.role}</h2>
+            <h2 className="line-1 anim-typewriter max-w-fit">
+              Front-end developer
+            </h2>
           </span>
         </div>
 
         <div id="info">
           <span className="action"> {"// complete the game to continue"} </span>
-          <span className="{ hide: isMobile }">
+          <span className={isMobile ? "hide" : ""}>
             {"// you can also see it on my Github page"}
           </span>
-          <span className="{ hide: !isMobile }">
+          <span className={!isMobile ? "hide" : ""}>
             {"// find my profile on Github:"}
           </span>
           <p className="code">
             <span className="identifier"> const </span>
             <span className="variable-name"> githubLink </span>
             <span className="operator"> = </span>
-            <a
-              className="string"
-              href={"https://github.com/" + config.contacts.social.github.user}
-            >
-              https://github.com/
-              {config.contacts.social.github.user}
+            <a className="string" href={"https://github.com/"}>
+              https://github.com/username
             </a>
           </p>
         </div>
       </section>
+      {!isMobile && (
+        <section data-aos="fade-up" className="game">
+          <SnakeGame />
+        </section>
+      )}
     </main>
   );
 }
